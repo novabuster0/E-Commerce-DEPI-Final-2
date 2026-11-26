@@ -12,7 +12,7 @@ function choosenRoute(props) { //props is object
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 z-10 w-full bg-white">
+    <header className="sticky top-0 z-50 w-full bg-white">
 
       <div className="w-full bg-[#F5F5F5] py-2 text-center text-xs tracking-wide text-[#444444]">
         FREE WORLDWIDE SHIPPING ON ORDERS OVER $200 //{' '}
