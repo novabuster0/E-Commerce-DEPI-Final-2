@@ -1,8 +1,13 @@
-// src/pages/Cart/components/CartItemCard.jsx
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const CartItemCard = ({ item, onUpdateQuantity, onRemove }) => {
+  const navigate = useNavigate();
   const itemSubtotal = (item.price * item.quantity).toFixed(2);
+
+  const handleOpenProduct = () => {
+    navigate("/product", { state: { product: item } });
+  };
 
   return (
     <div className="bg-white rounded-2xl border border-slate-200/80 p-4 sm:p-5 shadow-xs transition-all hover:border-slate-300">
@@ -10,11 +15,14 @@ const CartItemCard = ({ item, onUpdateQuantity, onRemove }) => {
         {/* الجزء الأيسر: الصورة + التفاصيل */}
         <div className="flex items-start gap-4 flex-1">
           {/* صورة المنتج */}
-          <div className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-100">
+          <div
+            onClick={handleOpenProduct}
+            className="relative w-20 h-24 sm:w-24 sm:h-28 rounded-xl overflow-hidden bg-slate-100 shrink-0 border border-slate-100 cursor-pointer"
+          >
             <img
               src={item.image}
               alt={item.title}
-              className="w-full h-full object-cover"
+              className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
             />
             {item.imageBadge && (
               <span
@@ -31,7 +39,10 @@ const CartItemCard = ({ item, onUpdateQuantity, onRemove }) => {
               {item.collectionTag}
             </span>
 
-            <h3 className="text-sm sm:text-base font-extrabold text-slate-900 leading-snug uppercase max-w-[240px]">
+            <h3
+              onClick={handleOpenProduct}
+              className="text-sm sm:text-base font-extrabold text-slate-900 leading-snug uppercase max-w-[240px] cursor-pointer hover:text-[#2563eb] transition-colors"
+            >
               {item.title}
             </h3>
 

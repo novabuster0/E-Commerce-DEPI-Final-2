@@ -1,8 +1,13 @@
-// src/pages/Cart/components/PairsWellWith.jsx
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const PairsWellWith = ({ products = [], onQuickAdd }) => {
+  const navigate = useNavigate();
   const [addedId, setAddedId] = useState(null);
+
+  const handleOpenProduct = (product) => {
+    navigate("/product", { state: { product } });
+  };
 
   const handleAddClick = (product) => {
     onQuickAdd(product);
@@ -54,7 +59,10 @@ const PairsWellWith = ({ products = [], onQuickAdd }) => {
             >
               <div>
                 {/* صورة المنتج + البادج */}
-                <div className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-slate-100 mb-4">
+                <div
+                  onClick={() => handleOpenProduct(product)}
+                  className="relative aspect-[4/3] w-full rounded-xl overflow-hidden bg-slate-100 mb-4 cursor-pointer"
+                >
                   <img
                     src={product.image}
                     alt={product.title}
@@ -78,7 +86,10 @@ const PairsWellWith = ({ products = [], onQuickAdd }) => {
                 </div>
 
                 {/* العنوان والوصف */}
-                <h3 className="text-xs sm:text-sm font-extrabold text-slate-900 uppercase mb-1">
+                <h3
+                  onClick={() => handleOpenProduct(product)}
+                  className="text-xs sm:text-sm font-extrabold text-slate-900 uppercase mb-1 cursor-pointer hover:text-[#2563eb] transition-colors"
+                >
                   {product.title}
                 </h3>
                 <p className="text-[11px] text-slate-500 leading-relaxed mb-4">
@@ -89,7 +100,10 @@ const PairsWellWith = ({ products = [], onQuickAdd }) => {
               {/* زرار الإضافة السريعة */}
               <button
                 type="button"
-                onClick={() => handleAddClick(product)}
+                onClick={(e) => {
+                  e.stopPropagation();
+                  handleAddClick(product);
+                }}
                 className={`w-full py-2.5 px-4 rounded-xl text-[11px] font-bold tracking-wider uppercase transition-all cursor-pointer ${
                   isAdded
                     ? "bg-emerald-600 text-white"
