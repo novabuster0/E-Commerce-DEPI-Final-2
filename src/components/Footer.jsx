@@ -11,7 +11,7 @@ export default function Footer() {
               LIMITED DROPS &amp; EDITORIAL 
               {/* &ampl is html entity */}
             </p>
-            <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-black">
+            <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-black">
               ACCESS THE VAULT
             </h2>
             <p className="mt-4 text-sm leading-relaxed text-[#444444]">
@@ -67,9 +67,15 @@ export default function Footer() {
             </div>
           </div>
         </div>
-
         <div className="mt-12 border-t border-gray-200 pt-6 text-center text-xs uppercase tracking-wide text-[#444444]">
           &copy; 2024 URBANOVA. All rights reserved.
+        </div>
+        <div>
+          <span className='rounded-2xl border-2 border-gray-200 bg-gray-100 px-6 py-4 text-0.5xl font-semibold text-gray-700 m-2'>VISA</span>
+          <span className='rounded-2xl border-2 border-gray-200 bg-gray-100 px-6 py-4 text-0.5xl font-semibold text-gray-700 m-2'>MASTERCARD</span>
+          <span className='rounded-2xl border-2 border-gray-200 bg-gray-100 px-6 py-4 text-0.5xl font-semibold text-gray-700 m-2'>AMEX</span>
+          <span className='rounded-2xl border-2 border-gray-200 bg-gray-100 px-6 py-4 text-0.5xl font-semibold text-gray-700 m-2'>APPLE PAY</span>
+          <span className='rounded-2xl border-2 border-gray-200 bg-gray-100 px-6 py-4 text-0.5xl font-semibold text-gray-700 m-2'>PAYPAL</span>
         </div>
       </div>
     </footer>
