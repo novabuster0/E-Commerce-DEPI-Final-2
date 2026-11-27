@@ -3,7 +3,6 @@ import ProductInfo from "./components/ProductInfo";
 import ProductSpecs from "./components/ProductSpecs";
 import CuratedPairings from "./components/CuratedPairings";
 
-// Static layout only: no state, no handlers. Navbar/Footer come from Layout.
 export default function ProductDetailsPage() {
     return (
         <div className="min-h-screen bg-[#f8fafc] font-sans text-slate-900">

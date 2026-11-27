@@ -62,15 +62,19 @@ export default function Navbar() {
               className="flex-1 bg-transparent text-sm outline-none placeholder:text-gray-500"
             />
           </div>
+            <button className="relative">
+              
+              <img src={fav} alt="fav" />
+            </button>
+          <Link to="/cart">
 
-          <button className="relative">
-            <img src={fav} alt="fav" />
-          </button>
-
-  
           <button className="relative">
             <img src={cart} alt="cart" />
           </button>
+
+          </Link>
+
+  
 
           
           <Link to="/login" className="h-10 w-10 overflow-hidden rounded-full bg-black">
