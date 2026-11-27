@@ -1,5 +1,9 @@
 import { Link } from "react-router-dom";
 import placeholder0 from "/src/assets/placeholder0.png";
+import men from "/src/assets/Home/community/men.png"; 
+import woman from "/src/assets/Home/community/woman.png"; 
+import men2 from "/src/assets/Home/community/men2.png"; 
+
 
 const essentials = [
     {
@@ -10,6 +14,7 @@ const essentials = [
         name: "OBSIDIAN HEAVYWEIGHT HOODIE",
         text: "Ultra-dense custom woven French terry with double-lined structural drop hood that maintains form in heavy rain.",
         stock: "IN STOCK // FAST SHIP",
+        image:men,
     },
     {
         id: 2,
@@ -19,6 +24,7 @@ const essentials = [
         name: "AEGIS MODULAR CROSSBODY RIG",
         text: "Equipped with German Fidlock® V-buckles, waterproof YKK Aquaguard zippers, and detachable pouch canisters.",
         stock: "LOW STOCK // 14 LEFT",
+        image:woman,
     },
     {
         id: 3,
@@ -28,6 +34,7 @@ const essentials = [
         name: "APEX TAILORED COMMUTER COAT",
         text: "Sleek trench profile enhanced with taped seams, internal carrying harness, and magnetic throat latches.",
         stock: "IN STOCK // FAST SHIP",
+        image: men2,
     },
 ];
 
@@ -47,7 +54,7 @@ const essentials = [
                     className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-4 font-figtree"
                 >
                     <img
-                        src={placeholder0}
+                        src={e.image}
                         alt={e.name}
                         className="aspect-[4/5] w-full rounded-[18px] object-cover"
                     />

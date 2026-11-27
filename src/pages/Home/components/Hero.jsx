@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import placeholder0 from "/src/assets/placeholder0.png";
-// import heroImg from "/src/assets/Home/hero.png";
+import heroImg from "/src/assets/Home/hero.png";
 
 const hero = {
     badge: "DROP 08 AVAILABLE GLOBALLY",
@@ -35,7 +35,7 @@ export default function Hero() {
                     key={s.title}
                     className="rounded-xl border border-slate-200 bg-white px-4 py-2.5"
                 >
-                    <p className="font-mono text-[10px] font-bold tracking-[0.08em] text-blue-600">
+                    <p className="font-mono text-[15px] font-bold tracking-[0.08em] text-blue-600">
                         {s.title}
                     </p>
                     <p className="mt-0.5 text-[12px] text-slate-500">
@@ -51,9 +51,9 @@ export default function Hero() {
     return (
         <section className="relative min-h-[842px] overflow-hidden bg-white font-figtree max-md:min-h-[700px]">
 
-            {/* Background photo + white fade */}
+            
             <img
-                src={placeholder0}
+                src={heroImg}
                 alt=""
                 className="absolute inset-0 h-full w-full object-cover object-top"
             />
@@ -63,22 +63,22 @@ export default function Hero() {
             <div className="relative mx-auto flex min-h-[842px] w-full max-w-[1440px] flex-col justify-end px-5 pb-10 md:px-10 max-md:min-h-[700px]">
 
                 {/* Top pills row */}
-                <div className="flex flex-wrap items-center justify-between gap-3">
-                    <div className="flex h-9 items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 font-mono text-[10px] tracking-[0.08em]">
+                <div className="flex  items-center justify-between gap-3">
+                    <div className="flex h-9 items-center gap-2 rounded-full border border-slate-200 bg-white/80 px-4 font-mono text-[11px] tracking-[0.08em]">
                         <span className="h-1.5 w-1.5 rounded-full bg-blue-600" />
                         <span className="font-bold text-blue-600">{hero.badge}</span>
                         <span className="text-slate-300">//</span>
                         <span className="text-slate-500">{hero.serial}</span>
                     </div>
 
-                    <div className="flex h-9 items-center gap-3 rounded-full border border-slate-200 bg-white/80 px-4 font-mono text-[10px] tracking-[0.08em] max-md:hidden">
+                    <div className="flex h-9 items-center gap-3 rounded-full border border-slate-200 bg-white/80 px-4 font-mono text-[11px] tracking-[0.08em] max-md:hidden">
                         <span className="text-slate-500">{hero.coord}</span>
                         <span className="font-bold text-blue-600">{hero.edition}</span>
                     </div>
                 </div>
 
                 {/* Season label */}
-                <p className="mt-12 font-mono text-[11px] font-bold tracking-[0.2em] text-blue-600">
+                <p className="mt-12 font-mono text-[12px] font-bold tracking-[0.2em] text-blue-600">
                     {hero.season}
                 </p>
 
@@ -98,7 +98,7 @@ export default function Hero() {
                 <div className="mt-8 flex flex-wrap gap-4">
                     <Link
                         to="/collections"
-                        className="flex h-12 w-[210px] items-center justify-center gap-2 rounded-xl bg-blue-600 text-[11px] font-extrabold tracking-[0.1em] text-white shadow-lg shadow-blue-600/25"
+                        className="flex h-12 w-[210px] items-center justify-center gap-2 rounded-xl bg-blue-600 text-[12px] font-extrabold tracking-[0.1em] text-white shadow-lg shadow-blue-600/25"
                     >
                         {hero.primaryLabel}
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -108,7 +108,7 @@ export default function Hero() {
 
                     <button
                         type="button"
-                        className="flex h-12 w-[245px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white text-[11px] font-extrabold tracking-[0.1em] text-slate-900"
+                        className="flex h-12 w-[245px] items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white text-[12px] font-extrabold tracking-[0.1em] text-slate-900"
                     >
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="#2563eb" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                             <circle cx="12" cy="12" r="10" />
@@ -119,7 +119,7 @@ export default function Hero() {
                 </div>
 
                 {/* Spec cards */}
-                <div className="mt-12 grid max-w-[1030px] grid-cols-4 gap-3 max-md:grid-cols-2">
+                <div className="mt-12 grid max-w-[1500px] grid-cols-4 gap-3 max-md:grid-cols-2">
                     {displaySpecs()}
                 </div>
             </div>

@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
-import placeholder0 from "/src/assets/placeholder0.png";
-import icon from "/src/assets/Home/Icon.png"; 
+import icon from "/src/assets/Home/grid/Icon.png"; 
+import shoe from "/src/assets/Home/grid/shoe.png"; 
+import man from "/src/assets/Home/grid/man.png"; 
+import woman from "/src/assets/Home/grid/woman.png"; 
+import accs from "/src/assets/Home//grid/accs.png"; 
 
 const categories = [
     {
@@ -8,7 +11,7 @@ const categories = [
         tag: "DIV 01",
         name: "MEN'S OUTERWEAR & HEAVY KNITS",
         text: "Weather-resistant shells, insulated liners, and merino waffle weaves",
-        image: placeholder0,
+        image: man,
         accent: true,
         size: "md:col-span-7 md:h-[481px]",
     },
@@ -17,7 +20,7 @@ const categories = [
         tag: "DIV 02",
         name: "WOMEN'S UTILITY & TAILORING",
         text: "Sculptural silhouettes, cropped bomber vests & cinched trousers",
-        image: placeholder0,
+        image: woman,
         accent: false,
         size: "md:col-span-5 md:h-[481px]",
     },
@@ -26,7 +29,7 @@ const categories = [
         tag: "DIV 03",
         name: "FOOTWEAR & LUG BOOTS",
         text: "Vibram® treaded lug soles and waterproof calfskins",
-        image: placeholder0,
+        image: accs,
         accent: false,
         size: "md:col-span-5 md:h-[420px]",
     },
@@ -35,7 +38,7 @@ const categories = [
         tag: "DIV 04",
         name: "ACCESSORIES & MODULAR BAGS",
         text: "Fidlock® magnetic crossbody rigs, eyewear, and technical balaclavas",
-        image: placeholder0,
+        image: shoe,
         accent: true,
         size: "md:col-span-7 md:h-[420px]",
     },
@@ -90,7 +93,7 @@ export default function CategoryGrid() {
     }
 
     return (
-        <section className="mx-auto w-full max-w-[1440px] px-5 py-16 md:px-10">
+        <section className="mx-auto w-full max-w-[1440px] px-5 py-16 md:px-10 mt-12 border-t border-gray-200 pt-6 ">
             <div className="mb-8 flex items-end justify-between">
                 <div>
                     <p className="font-mono text-[12px] font-extrabold tracking-[0.16em] text-blue-600">
